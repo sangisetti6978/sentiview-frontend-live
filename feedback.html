@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiview - All Feedbacks</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Sentiview</h1>
+            </div>
+            <nav>
+                <a href="dashboard.html" class="btn btn-secondary">Back to Dashboard</a>
+                <a href="analytics.html" class="btn btn-secondary">View Analytics</a>
+                <a href="#" id="logoutBtn" class="btn btn-logout">Logout</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="feedback-page">
+        <div class="container">
+            <div class="feedback-header">
+                <h2>All Feedbacks</h2>
+                <button class="btn btn-success" id="exportBtn">
+                    <i class="fas fa-file-excel"></i> Export as Excel
+                </button>
+            </div>
+            
+            <div class="feedback-table-container">
+                <table class="feedback-table">
+                    <thead>
+                        <tr>
+                            <th>DATE</th>
+                            <th>PRODUCT NAME</th>
+                            <th>CUSTOMER NAME</th>
+                            <th>RATING</th>
+                            <th>FEEDBACK</th>
+                            <th>SENTIMENT</th>
+                        </tr>
+                    </thead>
+                    <tbody id="feedbackTableBody">
+                        <!-- Feedback rows will be dynamically added here -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

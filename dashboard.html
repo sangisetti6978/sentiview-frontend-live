@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiview - Dashboard</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Sentiview</h1>
+            </div>
+            <nav>
+                <a href="analytics.html" class="btn btn-secondary">View Analytics</a>
+                <a href="#" id="logoutBtn" class="btn btn-logout">Logout</a>
+            </nav>
+        </div>
+    </header>
+    <main class="dashboard">
+        <div class="container">
+            <div class="search-bar">
+                <input type="text" placeholder="Search products..." id="searchInput">
+                <button type="button" id="searchBtn"><i class="fas fa-search"></i></button>
+            </div>
+
+            <div class="products-grid">
+                <div class="product-card" data-product-id="1">
+                    <div class="product-image">
+                        <img src="iphone.png"Apple iPhone 15 Pro">
+                    </div>
+                    <div class="product-info">
+                        <h3>Apple iPhone 15 Pro</h3>
+                        <p>A17 Pro chip with powerful performance</p>
+                        <div class="rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span>4.5 (1234 reviews)</span>
+                        </div>
+                        <div class="product-actions">
+                            <a href="product.html" class="btn btn-primary view-product">View Product →</a>
+                            <button class="btn btn-outline customer-reviews">Customer Reviews</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-product-id="2">
+                    <div class="product-image">
+                        <img src="creatine.png" alt="Creatine Monohydrate">
+                    </div>
+                    <div class="product-info">
+                        <h3>Creatine Monohydrate</h3>
+                        <p>Enhance muscle strength and performance</p>
+                        <div class="rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                            <span>4.0 (856 reviews)</span>
+                        </div>
+                        <div class="product-actions">
+                            <a href="product.html" class="btn btn-primary view-product">View Product →</a>
+                            <button class="btn btn-outline customer-reviews">Customer Reviews</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card" data-product-id="3">
+                    <div class="product-image">
+                        <img src="shirt.png" alt="Premium Cotton Shirt">
+                    </div>
+                    <div class="product-info">
+                        <h3>Premium Cotton Shirt</h3>
+                        <p>Comfortable and breathable for all-day wear</p>
+                        <div class="rating">
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                            <span>4.3 (642 reviews)</span>
+                        </div>
+                        <div class="product-actions">
+                            <a href="product.html" class="btn btn-primary view-product">View Product →</a>
+                            <button class="btn btn-outline customer-reviews">Customer Reviews</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

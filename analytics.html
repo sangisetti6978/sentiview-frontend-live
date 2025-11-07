@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiview - Sentiment Analytics</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Sentiview - Sentiment Analytics</h1>
+            </div>
+            <nav>
+                <a href="dashboard.html" class="btn btn-secondary">Back to Dashboard</a>
+                <a href="#" id="logoutBtn" class="btn btn-logout">Logout</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="analytics">
+        <div class="container">
+            <h2>Sentiment Analysis Results</h2>
+            
+            <div class="charts-container">
+                <div class="chart-card">
+                    <h3>Sentiment Distribution (Pie Chart)</h3>
+                    <div class="chart-wrapper">
+                        <canvas id="pieChart"></canvas>
+                    </div>
+                </div>
+                
+                <div class="chart-card">
+                    <h3>Sentiment Distribution (Bar Chart)</h3>
+                    <div class="chart-wrapper">
+                        <canvas id="barChart"></canvas>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="stats-cards">
+                <div class="stat-card positive">
+                    <div class="stat-icon">
+                        <i class="fas fa-smile"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Positive Feedbacks</h3>
+                        <p class="stat-number">0</p>
+                        <p class="stat-percentage">0%</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card negative">
+                    <div class="stat-icon">
+                        <i class="fas fa-frown"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Negative Feedbacks</h3>
+                        <p class="stat-number">0</p>
+                        <p class="stat-percentage">0%</p>
+                    </div>
+                </div>
+                
+                <div class="stat-card neutral">
+                    <div class="stat-icon">
+                        <i class="fas fa-meh"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h3>Total Feedbacks</h3>
+                        <p class="stat-number">0</p>
+                        <p class="stat-percentage">0%</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/main.js"></script>
+    <script src="js/chart.js"></script>
+</body>
+</html>
