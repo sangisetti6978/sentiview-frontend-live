@@ -1,15 +1,9 @@
-// --- Configuration ---
-const API_BASE_URL = 'http://localhost:5000/api'; // Backend server URL
 
-// --- Sentiment Analysis Words ---
+const API_BASE_URL = 'hhttps://sentiview-backend-live.onrender.com';
 const positiveWords = ['good', 'great', 'awesome', 'excellent', 'amazing', 'fantastic', 'wonderful', 'nice', 'love', 'perfect'];
 const negativeWords = ['bad', 'terrible', 'awful', 'horrible', 'hate', 'worst', 'disappointing', 'poor', 'unacceptable', 'wrong'];
-
-// --- Global State ---
 let authToken = localStorage.getItem('authToken');
-let feedbacks = []; // This will now be populated from the API
-
-// --- DOM Elements ---
+let feedbacks = []; 
 const loginForm = document.getElementById('loginForm');
 const loginLink = document.getElementById('loginLink');
 const logoutBtn = document.getElementById('logoutBtn');
@@ -20,8 +14,6 @@ const feedbackForm = document.getElementById('feedbackForm');
 const exportBtn = document.getElementById('exportBtn');
 const searchBtn = document.getElementById('searchBtn');
 const searchInput = document.getElementById('searchInput');
-
-// Initialize
 document.addEventListener('DOMContentLoaded', function() {
     checkLoginStatus();
     
@@ -33,8 +25,6 @@ document.addEventListener('DOMContentLoaded', function() {
         fetchFeedbacksForAnalytics();
     }
 });
-
-// --- AUTHENTICATION LOGIC ---
 if (loginForm) {
     loginForm.addEventListener('submit', async function(e) {
         e.preventDefault();
@@ -42,7 +32,6 @@ if (loginForm) {
         const password = document.getElementById('password').value;
         
         try {
-            // Using signup endpoint for simplicity. You can create a separate login form if needed.
             const response = await fetch(`${API_BASE_URL}/auth/signup`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
